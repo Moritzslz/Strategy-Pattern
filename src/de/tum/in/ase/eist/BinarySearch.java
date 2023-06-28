@@ -9,11 +9,9 @@ public class BinarySearch implements SearchStrategy {
         int upperBound = chapters.size() - 1;
         int mid = (lowerBound + upperBound) / 2;
         int comperator = 0;
-
         if (chapters.get(lowerBound) == chapters.get(upperBound)) {
             return chapters.get(mid).getPageNumber();
         }
-
         while (lowerBound < upperBound) {
             mid = (lowerBound + upperBound) / 2;
             comperator = chapters.get(mid).getName().compareTo(name);
