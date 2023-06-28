@@ -10,11 +10,9 @@ public class BinarySearch implements SearchStrategy {
         int mid = (lowerBound + upperBound) / 2;
         int comperator;
 
-        /*
         if (chapters.get(lowerBound) == chapters.get(upperBound)) {
             return chapters.get(mid).getPageNumber();
         }
-         */
 
         while (lowerBound < upperBound) {
             mid = (lowerBound + upperBound) / 2;
@@ -27,6 +25,11 @@ public class BinarySearch implements SearchStrategy {
                 return chapters.get(mid).getPageNumber();
             }
         }
+
+        if (lowerBound == upperBound && chapters.get(lowerBound).getName().equals(name)) {
+            return chapters.get(lowerBound).getPageNumber();
+        }
+
         return -1;
     }
 }
