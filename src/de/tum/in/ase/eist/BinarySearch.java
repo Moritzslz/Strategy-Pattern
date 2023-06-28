@@ -2,7 +2,7 @@ package de.tum.in.ase.eist;
 
 import java.util.List;
 
-public class BinarySearch {
+public class BinarySearch implements SearchStrategy {
 
     public int  performSearch(List<Chapter> chapters, String name) {
         int lowerBound = 0;

@@ -2,7 +2,7 @@ package de.tum.in.ase.eist;
 
 import java.util.List;
 
-public class LinearSearch {
+public class LinearSearch implements SearchStrategy {
 
     public int  performSearch(List<Chapter> chapters, String name) {
         for (int i = 0; i < chapters.size(); i++) {
