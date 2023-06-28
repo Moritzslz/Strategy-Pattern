@@ -6,10 +6,10 @@ public class LinearSearch {
 
     public LinearSearch() {}
 
-    public int  performSearch(List<Chapter> chapters, String page) {
-        for (int pageNumber = 0; pageNumber < chapters.size(); pageNumber++) {
-            if (chapters.get(pageNumber).getName() == page) {
-                return pageNumber;
+    public int  performSearch(List<Chapter> chapters, String name) {
+        for (int i = 0; i < chapters.size(); i++) {
+            if (chapters.get(i).getName() == name) {
+                return chapters.get(i).getPageNumber();
             }
         }
         return -1;
