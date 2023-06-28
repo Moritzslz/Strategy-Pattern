@@ -1,6 +1,5 @@
 package de.tum.in.ase.eist;
 
-import java.util.Comparator;
 import java.util.List;
 
 public class BinarySearch {
@@ -17,7 +16,7 @@ public class BinarySearch {
 
         while (lowerBound < upperBound) {
             mid = (lowerBound + upperBound) / 2;
-            comperator = name.compareTo(chapters.get(mid).getName());
+            comperator = chapters.get(mid).getName().compareTo(name);
             if (comperator > 0)
                 lowerBound = mid + 1;
             else if (comperator < 0)
