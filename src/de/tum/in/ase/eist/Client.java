@@ -33,15 +33,19 @@ public final class Client {
 	public static void main(String[] args) {
 		// TODO 7: Init Context and Policy
 
+		Context context = new Context();
+		Policy policy = new Policy(context);
+
 		// Run 10 times to simulate different search strategies
 		for (int i = 0; i < NUMBER_OF_SIMULATIONS; i++) {
 			// TODO 8: Create a list of book entries using the method createRandomBook
-
+			List<Chapter> book = createRandomBook();
 			// TODO 9: Configure Context
-
+			policy.configure();
 			String chapterToSearch = createChapters(1).get(0);
 			// TODO 10: Search for chapter in book and store the result in pageNumber
 			int pageNumber = -1;
+			pageNumber = context.search(chapterToSearch);
 			System.out.println("Corresponding page for " + chapterToSearch + ": " + pageNumber);
 		}
 	}
