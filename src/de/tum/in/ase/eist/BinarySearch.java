@@ -18,9 +18,9 @@ public class BinarySearch {
         while (lowerBound < upperBound) {
             mid = (lowerBound + upperBound) / 2;
             comperator = name.compareTo(chapters.get(mid).getName());
-            if (comperator < 0)
+            if (comperator > 0)
                 lowerBound = mid + 1;
-            else if (comperator > 0)
+            else if (comperator < 0)
                 upperBound = mid - 1;
             else if (chapters.get(mid).getName().equals(name))
                 return chapters.get(mid).getPageNumber();
